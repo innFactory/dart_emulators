@@ -12,30 +12,7 @@ part of 'toolchain.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ToolchainTearOff {
-  const _$ToolchainTearOff();
-
-  _Toolchain call(
-      {required String adbPath,
-      required String avdmanagerPath,
-      required String emulatorPath,
-      required String flutterPath,
-      required String xcrunPath}) {
-    return _Toolchain(
-      adbPath: adbPath,
-      avdmanagerPath: avdmanagerPath,
-      emulatorPath: emulatorPath,
-      flutterPath: flutterPath,
-      xcrunPath: xcrunPath,
-    );
-  }
-}
-
-/// @nodoc
-const $Toolchain = _$ToolchainTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$Toolchain {
@@ -218,23 +195,23 @@ class _$_Toolchain extends _Toolchain {
 
 abstract class _Toolchain extends Toolchain {
   const factory _Toolchain(
-      {required String adbPath,
-      required String avdmanagerPath,
-      required String emulatorPath,
-      required String flutterPath,
-      required String xcrunPath}) = _$_Toolchain;
+      {required final String adbPath,
+      required final String avdmanagerPath,
+      required final String emulatorPath,
+      required final String flutterPath,
+      required final String xcrunPath}) = _$_Toolchain;
   const _Toolchain._() : super._();
 
   @override
-  String get adbPath;
+  String get adbPath => throw _privateConstructorUsedError;
   @override
-  String get avdmanagerPath;
+  String get avdmanagerPath => throw _privateConstructorUsedError;
   @override
-  String get emulatorPath;
+  String get emulatorPath => throw _privateConstructorUsedError;
   @override
-  String get flutterPath;
+  String get flutterPath => throw _privateConstructorUsedError;
   @override
-  String get xcrunPath;
+  String get xcrunPath => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ToolchainCopyWith<_Toolchain> get copyWith =>

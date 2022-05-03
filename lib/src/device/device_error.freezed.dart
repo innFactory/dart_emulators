@@ -12,53 +12,7 @@ part of 'device_error.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$DeviceErrorTearOff {
-  const _$DeviceErrorTearOff();
-
-  DeviceErrorToolchainFailure toolchainFailure(
-      {required String op, required String command, required String message}) {
-    return DeviceErrorToolchainFailure(
-      op: op,
-      command: command,
-      message: message,
-    );
-  }
-
-  DeviceErrorProcessKillFailure processKillFailure(
-      {required String op, required String message}) {
-    return DeviceErrorProcessKillFailure(
-      op: op,
-      message: message,
-    );
-  }
-
-  DeviceErrorFlutterFailure flutterFailure(
-      {required String op, required FlutterError error}) {
-    return DeviceErrorFlutterFailure(
-      op: op,
-      error: error,
-    );
-  }
-
-  DeviceErrorUnimplementedFailure unimplemented() {
-    return const DeviceErrorUnimplementedFailure();
-  }
-
-  DeviceErrorForeachFailure foreachFailure(
-      {required String phase, required String message, DeviceState? device}) {
-    return DeviceErrorForeachFailure(
-      phase: phase,
-      message: message,
-      device: device,
-    );
-  }
-}
-
-/// @nodoc
-const $DeviceError = _$DeviceErrorTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$DeviceError {
@@ -322,13 +276,13 @@ class _$DeviceErrorToolchainFailure implements DeviceErrorToolchainFailure {
 
 abstract class DeviceErrorToolchainFailure implements DeviceError {
   const factory DeviceErrorToolchainFailure(
-      {required String op,
-      required String command,
-      required String message}) = _$DeviceErrorToolchainFailure;
+      {required final String op,
+      required final String command,
+      required final String message}) = _$DeviceErrorToolchainFailure;
 
-  String get op;
-  String get command;
-  String get message;
+  String get op => throw _privateConstructorUsedError;
+  String get command => throw _privateConstructorUsedError;
+  String get message => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $DeviceErrorToolchainFailureCopyWith<DeviceErrorToolchainFailure>
       get copyWith => throw _privateConstructorUsedError;
@@ -503,11 +457,11 @@ class _$DeviceErrorProcessKillFailure implements DeviceErrorProcessKillFailure {
 
 abstract class DeviceErrorProcessKillFailure implements DeviceError {
   const factory DeviceErrorProcessKillFailure(
-      {required String op,
-      required String message}) = _$DeviceErrorProcessKillFailure;
+      {required final String op,
+      required final String message}) = _$DeviceErrorProcessKillFailure;
 
-  String get op;
-  String get message;
+  String get op => throw _privateConstructorUsedError;
+  String get message => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $DeviceErrorProcessKillFailureCopyWith<DeviceErrorProcessKillFailure>
       get copyWith => throw _privateConstructorUsedError;
@@ -688,11 +642,11 @@ class _$DeviceErrorFlutterFailure implements DeviceErrorFlutterFailure {
 
 abstract class DeviceErrorFlutterFailure implements DeviceError {
   const factory DeviceErrorFlutterFailure(
-      {required String op,
-      required FlutterError error}) = _$DeviceErrorFlutterFailure;
+      {required final String op,
+      required final FlutterError error}) = _$DeviceErrorFlutterFailure;
 
-  String get op;
-  FlutterError get error;
+  String get op => throw _privateConstructorUsedError;
+  FlutterError get error => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $DeviceErrorFlutterFailureCopyWith<DeviceErrorFlutterFailure> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1025,13 +979,13 @@ class _$DeviceErrorForeachFailure implements DeviceErrorForeachFailure {
 
 abstract class DeviceErrorForeachFailure implements DeviceError {
   const factory DeviceErrorForeachFailure(
-      {required String phase,
-      required String message,
-      DeviceState? device}) = _$DeviceErrorForeachFailure;
+      {required final String phase,
+      required final String message,
+      final DeviceState? device}) = _$DeviceErrorForeachFailure;
 
-  String get phase;
-  String get message;
-  DeviceState? get device;
+  String get phase => throw _privateConstructorUsedError;
+  String get message => throw _privateConstructorUsedError;
+  DeviceState? get device => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $DeviceErrorForeachFailureCopyWith<DeviceErrorForeachFailure> get copyWith =>
       throw _privateConstructorUsedError;

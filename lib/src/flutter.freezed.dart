@@ -12,36 +12,11 @@ part of 'flutter.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$FlutterErrorTearOff {
-  const _$FlutterErrorTearOff();
-
-  FlutterErrorToolchainFailure toolchainFailure(
-      {required String op, required String message}) {
-    return FlutterErrorToolchainFailure(
-      op: op,
-      message: message,
-    );
-  }
-
-  FlutterErrorDeviceFailure deviceFailure(
-      {required DeviceState state, required String message}) {
-    return FlutterErrorDeviceFailure(
-      state: state,
-      message: message,
-    );
-  }
-}
-
-/// @nodoc
-const $FlutterError = _$FlutterErrorTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$FlutterError {
   String get message => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String op, String message) toolchainFailure,
@@ -261,12 +236,12 @@ class _$FlutterErrorToolchainFailure implements FlutterErrorToolchainFailure {
 
 abstract class FlutterErrorToolchainFailure implements FlutterError {
   const factory FlutterErrorToolchainFailure(
-      {required String op,
-      required String message}) = _$FlutterErrorToolchainFailure;
+      {required final String op,
+      required final String message}) = _$FlutterErrorToolchainFailure;
 
-  String get op;
+  String get op => throw _privateConstructorUsedError;
   @override
-  String get message;
+  String get message => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   $FlutterErrorToolchainFailureCopyWith<FlutterErrorToolchainFailure>
@@ -425,12 +400,12 @@ class _$FlutterErrorDeviceFailure implements FlutterErrorDeviceFailure {
 
 abstract class FlutterErrorDeviceFailure implements FlutterError {
   const factory FlutterErrorDeviceFailure(
-      {required DeviceState state,
-      required String message}) = _$FlutterErrorDeviceFailure;
+      {required final DeviceState state,
+      required final String message}) = _$FlutterErrorDeviceFailure;
 
-  DeviceState get state;
+  DeviceState get state => throw _privateConstructorUsedError;
   @override
-  String get message;
+  String get message => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   $FlutterErrorDeviceFailureCopyWith<FlutterErrorDeviceFailure> get copyWith =>

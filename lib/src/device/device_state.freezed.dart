@@ -12,40 +12,11 @@ part of 'device_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 DeviceState _$DeviceStateFromJson(Map<String, dynamic> json) {
   return _DeviceState.fromJson(json);
 }
-
-/// @nodoc
-class _$DeviceStateTearOff {
-  const _$DeviceStateTearOff();
-
-  _DeviceState call(
-      {required String id,
-      required String name,
-      required DevicePlatform platform,
-      required bool emulator,
-      bool booted = false,
-      @JsonKey(ignore: true) Option<Process> process = kNone}) {
-    return _DeviceState(
-      id: id,
-      name: name,
-      platform: platform,
-      emulator: emulator,
-      booted: booted,
-      process: process,
-    );
-  }
-
-  DeviceState fromJson(Map<String, Object?> json) {
-    return DeviceState.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeviceState = _$DeviceStateTearOff();
 
 /// @nodoc
 mixin _$DeviceState {
@@ -211,10 +182,11 @@ class _$_DeviceState extends _DeviceState {
   final DevicePlatform platform;
   @override
   final bool emulator;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool booted;
-  @override // ignore: invalid_annotation_target
+// ignore: invalid_annotation_target
+  @override
   @JsonKey(ignore: true)
   final Option<Process> process;
 
@@ -236,6 +208,7 @@ class _$_DeviceState extends _DeviceState {
             const DeepCollectionEquality().equals(other.process, process));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -259,30 +232,30 @@ class _$_DeviceState extends _DeviceState {
 
 abstract class _DeviceState extends DeviceState {
   const factory _DeviceState(
-      {required String id,
-      required String name,
-      required DevicePlatform platform,
-      required bool emulator,
-      bool booted,
-      @JsonKey(ignore: true) Option<Process> process}) = _$_DeviceState;
+      {required final String id,
+      required final String name,
+      required final DevicePlatform platform,
+      required final bool emulator,
+      final bool booted,
+      @JsonKey(ignore: true) final Option<Process> process}) = _$_DeviceState;
   const _DeviceState._() : super._();
 
   factory _DeviceState.fromJson(Map<String, dynamic> json) =
       _$_DeviceState.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  DevicePlatform get platform;
+  DevicePlatform get platform => throw _privateConstructorUsedError;
   @override
-  bool get emulator;
+  bool get emulator => throw _privateConstructorUsedError;
   @override
-  bool get booted;
+  bool get booted => throw _privateConstructorUsedError;
   @override // ignore: invalid_annotation_target
   @JsonKey(ignore: true)
-  Option<Process> get process;
+  Option<Process> get process => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DeviceStateCopyWith<_DeviceState> get copyWith =>
